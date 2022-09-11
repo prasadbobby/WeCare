@@ -1,0 +1,16 @@
+.profile{
+    background-color: black;
+    color: white;
+    margin: 4% 30% 4% 30% ;
+    padding: 2%;
+    border-radius: 6%;
+}
+img{
+    margin: 20px 0px 20px 20px;
+} 
+ .details{
+    margin: 4% 0 0 0;
+}
+p{
+    margin: -1%;
+}

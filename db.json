@@ -1,0 +1,116 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Maria",
+      "password": "maria12345",
+      "gender": "F",
+      "dateOfBirth": "1996-01-01",
+      "email": "maria@gmail.com",
+      "mobileNumber": 1234567890,
+      "pincode": 123456,
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India"
+    },
+    {
+      "name": "Sera",
+      "password": "Sera@123",
+      "dateOfBirth": "1997-01-01",
+      "gender": "F",
+      "mobileNumber": 1234567890,
+      "email": "sera@gmail.com",
+      "pincode": 123456,
+      "city": "Kozhikode",
+      "state": "Kerala",
+      "country": "India",
+      "id": 2
+    },
+    {
+      "name": "Jake",
+      "password": "JakeAmy",
+      "mobileNumber": "1234567890",
+      "email": "jake@b99",
+      "dateOfBirth": "1980-11-18",
+      "gender": "M",
+      "pincode": "567890",
+      "city": "Brooklyn",
+      "state": "New York",
+      "country": "America",
+      "id": 3
+    }
+  ],
+  "coaches": [
+    {
+      "id": 1,
+      "name": "Rose",
+      "password": "rose12345",
+      "gender": "F",
+      "dateOfBirth": "1996-01-01",
+      "mobileNumber": 1234567890,
+      "speciality": "Confidence Issues"
+    },
+    {
+      "name": "Setna",
+      "password": "Setna@123",
+      "dateOfBirth": "1995-01-01",
+      "gender": "F",
+      "mobileNumber": 1235678905,
+      "speciality": "Depression Issues",
+      "id": 2
+    },
+    {
+      "name": "Amy",
+      "password": "AmyJake",
+      "mobileNumber": "1234567809",
+      "dateOfBirth": "1984-12-01",
+      "gender": "F",
+      "speciality": "Psychology",
+      "id": 3
+    },
+    {
+      "name": "Bobby",
+      "password": "bobby12345",
+      "mobileNumber": "6300807459",
+      "dateOfBirth": "2001-01-24",
+      "gender": "M",
+      "speciality": "Confidence Issues",
+      "id": 4
+    }
+  ],
+  "bookings": [
+    {
+      "appointmentDate": "2021-11-14",
+      "slot": "11 AM to 12 AM",
+      "userId": 2,
+      "coachId": 2,
+      "id": 1
+    },
+    {
+      "appointmentDate": "2021-11-12",
+      "slot": "9 AM to 10 AM",
+      "userId": 2,
+      "coachId": 3,
+      "id": 3
+    },
+    {
+      "appointmentDate": "2021-11-23",
+      "slot": "10 AM to 11 AM",
+      "userId": 3,
+      "coachId": 1,
+      "id": 4
+    },
+    {
+      "appointmentDate": "2022-09-17",
+      "slot": "9 AM to 10 AM",
+      "coachId": 3,
+      "id": 5
+    },
+    {
+      "appointmentDate": "2022-09-16",
+      "slot": "9 AM to 10 AM",
+      "coachId": 4,
+      "id": 6
+    }
+  ]
+}

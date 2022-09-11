@@ -1,0 +1,15 @@
+<div class="profile">
+    <div class="row">
+        <div class="col-6">
+            <img *ngIf="coach.gender==='F'" src="../../../assets/Images/female.png" height="200" width="200">
+            <img *ngIf="coach.gender==='M'" src="../../../assets/Images/male.png" height="200" width="200">
+        </div>
+        <div class="col-6 details">
+            <h2>{{coach.name}}</h2>
+            <h4>Coach Id: {{coach.id}}</h4><br>
+            <p>Date of Birth: {{coach.dateOfBirth}}</p>
+            <p>Mobile Number: {{coach.mobileNumber}}</p>
+            <p>Speciality: {{coach.speciality}}</p>
+        </div>
+    </div>
+</div>

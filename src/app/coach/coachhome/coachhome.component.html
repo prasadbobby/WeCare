@@ -1,0 +1,14 @@
+<div *ngFor="let schedule of scheduleDetails" class="schedules">
+    <h3>Appointment Date:</h3>
+    <h3>{{schedule.appointmentDate}}</h3>
+    <h5>Slot: {{schedule.slot}}</h5><br><br>
+    <p>Booking Id: {{schedule.id}}</p>
+    <p>User Id: {{schedule.userId}}</p>
+</div>
+
+
+<div class="noschedule" *ngIf="!schedule">
+    <img src="../../../assets/Images/Notepad_icon.svg.png" height="100" width="100">
+    <h3>No planned schedules yet</h3>
+</div>
+

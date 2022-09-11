@@ -1,0 +1,31 @@
+.form{
+    background-color: black;
+    color: white;
+    
+    margin: 2% 20% 2% 20%;
+    padding: 2%;
+    border-radius: 4%;
+}
+.row{
+   justify-content: center;
+}
+img,h4{
+    margin: 2%;
+    text-align: center;
+}
+button{
+    width: 100%;
+}
+.validation{
+    color: red;
+    margin-top: -20px;
+}
+.login{
+    width: 20%;
+}
+.registered{
+    text-align: center;
+}
+.registered img{
+    margin-top: 6%;
+}

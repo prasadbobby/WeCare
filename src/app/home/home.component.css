@@ -1,0 +1,17 @@
+*{
+    text-align: center;
+}
+h2{
+    margin: 2%;
+}
+.forms{
+    margin: 2%; 
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.cards{
+    padding: 4%;
+    background-color: black;
+    margin: 1%;
+    border-radius: 4%;
+}

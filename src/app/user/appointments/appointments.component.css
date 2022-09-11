@@ -1,0 +1,49 @@
+.appointment{
+    background-color: black;
+    color: white;
+    margin: 6% 30% 6% 30%;
+    padding: 4%;
+    text-align: center;
+    border-radius: 4%;
+}
+.appointment p{
+    margin-bottom: -2px;
+}
+.appointment button{
+    width: 100%;
+}
+.noApp{
+    margin: 10% 35% 6% 35%;
+    text-align: center;
+}
+.reschedule{
+    background-color: black;
+    color: white;
+    margin: 4% 20% 4% 20%;
+    padding: 4%;
+    border-radius: 4%;
+}
+.reschedule .row{
+    justify-content: center;
+    text-align: center;
+    margin: 4%;
+    margin-top: 0%;
+}
+.form-group label{
+    margin: 1.4%;
+}
+.reschedule button{
+    width: 100%;
+}
+.validation{
+    color: red;
+    margin-top: -4%;
+}
+.success{
+    background-color: black;
+    color: white;
+    margin: 6% 30% 6% 30%;
+    text-align: center;
+    padding: 4% 4% 2% 4%;
+    border-radius: 4%;
+}

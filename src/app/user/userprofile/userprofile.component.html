@@ -1,0 +1,17 @@
+<div class="profile">
+    <div class="row">
+        <div class="col-6">
+            <img *ngIf="user.gender==='F'" src="../../../assets/Images/female.png" height="200" width="200">
+            <img *ngIf="user.gender==='M'" src="../../../assets/Images/male.png" height="200" width="200">
+        </div>
+        <div class="col-6 details">
+            <h2>{{user.name}}</h2><br>
+            <!-- <h4>User Id: {{user.id}}</h4><br> -->
+            <p>Date of Birth: {{user.dateOfBirth}}</p>
+            <p>Email Id: {{user.email}}</p>
+            <p>Mobile Number: {{user.mobileNumber}}</p>
+            <p>Address: {{user.city}}, {{user.state}}, {{user.country}}</p>
+            <p>Pincode: {{user.pincode}}</p>
+        </div>
+    </div>
+</div>

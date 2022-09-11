@@ -1,0 +1,48 @@
+<div *ngIf="!showForm && !confirm" class="search">
+    <input type="text" class="form-control" placeholder="Search for speciality">
+</div>
+<div *ngIf="!showForm && !confirm">
+    <div *ngFor="let coach of coachArray" class="profile">
+        <div class="row">
+            <div class="col-6">
+                <img *ngIf="coach.gender=='F'" src="../../../assets/Images/female.png" height="200" width="200">
+                <img *ngIf="coach.gender=='M'" src="../../../assets/Images/male.png" height="200" width="200">
+            </div>
+            <div class="col-6 details">
+                <h2>{{coach.name}}</h2>
+                <h4>Coach Id: {{coach.id}}</h4><br>
+                <p>Mobile Number: {{coach.mobileNumber}}</p>
+                <p>Speciality: {{coach.speciality}}</p>
+                <button (click)="showForm=true; coachId=coach.id" class="btn btn-primary">Book an appointment</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="showForm && !confirm" class="appointment">
+    <div class="row">
+        <img src="../../../assets/Images/Notepad_icon.svg.png" height="50" width="50">
+        <h2>Proceed with appointment</h2>
+    </div>
+    <form [formGroup]="appointmentForm" (ngSubmit)="confirmAppointment()">
+        <label>Date of Appointment</label>
+        <input type="date" formControlName="appointmentDate" class="form-control"><br>
+        <p class="validation"
+            *ngIf="appointmentForm.controls.appointmentDate.errors && (appointmentForm.controls.appointmentDate.dirty || appointmentForm.controls.appointmentDate.touched)">
+            Date should be any upcoming 7 days</p>
+        <label>Preferred Slot</label><br>
+        <div class="form-group">
+            <input type="radio" formControlName="slot" name="slot" value="9 AM to 10 AM"><label>9 AM to 10 AM</label>
+            <input type="radio" formControlName="slot" name="slot" value="10 AM to 11 AM"><label>10 AM to 11 AM</label>
+            <input type="radio" formControlName="slot" name="slot" value="11 AM to 12 AM"><label>11 AM to 12 AM</label>
+            <input type="radio" formControlName="slot" name="slot" value="2 PM to 3 PM"><label>2 PM to 3 PM</label>
+            <input type="radio" formControlName="slot" name="slot" value="3 PM to 4 PM"><label>3 PM to 4 PM</label>
+            <input type="radio" formControlName="slot" name="slot" value="4 PM to 5 PM"><label>4 PM to 5 PM</label>
+        </div>
+        <button [disabled]="!appointmentForm.valid" class="btn btn-success">Confirm your
+            appointment</button>
+    </form>
+</div>
+<div *ngIf="confirm" class="confirm">
+    <p>Your appointment is scheduled successfully</p>
+    <button (click)="goBack()" class=" btn btn-primary"><i class="fa fa-long-arrow-left"></i> Go back</button>
+</div>

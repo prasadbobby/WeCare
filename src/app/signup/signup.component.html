@@ -1,0 +1,105 @@
+<div *ngIf="formDisplay" class="form">
+    <div class="row">
+        <img src="{{signUpImg}}" height="50" width="50">
+        <h4>{{signupTitle}}</h4>
+    </div>
+    <div *ngIf="role==='users'">
+        <form [formGroup]="userRegisterForm" (ngSubmit)="userregister()">
+        <div class="row">
+            <div class="col-6">
+                <label>Name</label>
+                <input class="form-control" type="text" formControlName="name"><br>
+                <p *ngIf="userRegisterForm.controls.name.errors && (userRegisterForm.controls.name.dirty||userRegisterForm.controls.name.touched)" class="validation">Name should have 3 to 50 characters </p>
+                <label>Date of Birth</label>
+                <input type="date" class="form-control" formControlName="dateOfBirth"><br>
+                <p *ngIf="userRegisterForm.controls.dateOfBirth.errors?.ageInvalid && (userRegisterForm.controls.dateOfBirth.dirty||userRegisterForm.controls.dateOfBirth.touched)" class="validation">{{userRegisterForm.controls.dateOfBirth.errors?.ageInvalid.message}}</p>
+            </div>
+            <div class="col-6">
+                <label>Password</label>
+                <input class="form-control" type="password" formControlName="password"><br>
+                <p *ngIf="userRegisterForm.controls.password.errors && (userRegisterForm.controls.password.dirty||userRegisterForm.controls.password.touched)" class="validation">Password should have 5 to 10 characters </p>
+                <label>Gender</label><br>
+                <input value="M" name="gender" type="radio" formControlName="gender">Male &nbsp;&nbsp;&nbsp;&nbsp;
+                <input value="F" name="gender" type="radio" formControlName="gender">Female<br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label>Mobile Number</label>
+                <input type="text" class="form-control" formControlName="mobileNumber"><br>
+                <p *ngIf="userRegisterForm.controls.mobileNumber.errors && (userRegisterForm.controls.mobileNumber.dirty||userRegisterForm.controls.mobileNumber.touched)" class="validation">Mobile number should be 10 digits</p>
+                <label>Pincode</label>
+                <input type="text" class="form-control" formControlName="pincode"><br>
+                <p *ngIf="userRegisterForm.controls.pincode.errors && (userRegisterForm.controls.pincode.dirty||userRegisterForm.controls.pincode.touched)" class="validation">Pincode should have 6 digits</p>
+                <label>State</label>
+                <input type="text" class="form-control" formControlName="state"><br>
+                <p *ngIf="userRegisterForm.controls.state.errors && (userRegisterForm.controls.state.dirty||userRegisterForm.controls.state.touched)" class="validation">The state should have 6 to 20 characters</p>
+            </div>
+            <div class="col-6">
+                <label>Email</label>
+                <input type="email" class="form-control" formControlName="email"><br>
+                <p *ngIf="userRegisterForm.controls.email.errors && (userRegisterForm.controls.email.dirty||userRegisterForm.controls.email.touched)" class="validation">Email id should be valid</p>
+                <label>City</label>
+                <input type="text" class="form-control" formControlName="city"><br>
+                <p *ngIf="userRegisterForm.controls.city.errors && (userRegisterForm.controls.city.dirty||userRegisterForm.controls.city.touched)" class="validation">The city should have 6 to 20 characters</p>
+                <label>Country</label>
+                <input type="text" class="form-control" formControlName="country"><br>
+                <p *ngIf="userRegisterForm.controls.country.errors && (userRegisterForm.controls.country.dirty||userRegisterForm.controls.country.touched)" class="validation">The country should have 6 to 20 characters</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4"><button type="submit" [disabled]="!userRegisterForm.valid" class="btn btn-success">Register</button></div>
+            <div class="col-4"></div>
+        </div>
+    </form>
+    </div>
+    <div *ngIf="role==='coaches'">
+        <form [formGroup]="coachRegisterForm" (ngSubmit)="coachregister()">
+        <div class="row">
+            <div class="col-6">
+                <label>Name</label>
+                <input class="form-control" type="text" formControlName="name"><br>
+                <p *ngIf="coachRegisterForm.controls.name.errors && (coachRegisterForm.controls.name.dirty||coachRegisterForm.controls.name.touched)" class="validation">Name should have 3 to 50 characters </p>
+                <label>Date of Birth</label>
+                <input type="date" class="form-control" formControlName="dateOfBirth"><br>
+                <p *ngIf="coachRegisterForm.controls.dateOfBirth.errors?.ageInvalid && (coachRegisterForm.controls.dateOfBirth.dirty||coachRegisterForm.controls.dateOfBirth.touched)" class="validation">{{coachRegisterForm.controls.dateOfBirth.errors?.ageInvalid.message}}</p>
+            </div>
+            <div class="col-6">
+                <label>Password</label>
+                <input class="form-control" type="password" formControlName="password"><br>
+                <p *ngIf="coachRegisterForm.controls.password.errors && (coachRegisterForm.controls.password.dirty||coachRegisterForm.controls.password.touched)" class="validation">Password should have 5 to 10 characters </p>
+                <label>Gender</label><br>
+                <input value="M" name="gender" type="radio" formControlName="gender">Male &nbsp;&nbsp;&nbsp;&nbsp;
+                <input value="F" name="gender" type="radio" formControlName="gender">Female<br><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label>Mobile Number</label>
+                <input type="text" class="form-control" formControlName="mobileNumber"><br>
+                <p *ngIf="coachRegisterForm.controls.mobileNumber.errors && (coachRegisterForm.controls.mobileNumber.dirty||coachRegisterForm.controls.mobileNumber.touched)" class="validation">Mobile number should be 10 digits</p>
+            </div>
+            <div class="col-6">
+                <label>Speciality</label>
+                <input type="text" class="form-control" formControlName="speciality"><br>
+                <p *ngIf="coachRegisterForm.controls.speciality.errors && (coachRegisterForm.controls.speciality.dirty||coachRegisterForm.controls.speciality.touched)" class="validation">Speciality should have atleast 10 characters </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4"><button type="submit" [disabled]="!coachRegisterForm.valid" class="btn btn-success">Register</button></div>
+            <div class="col-4"></div>
+        </div>
+        </form>
+    </div>    
+</div> 
+<div *ngIf="!formDisplay">
+<div class="registered">
+    <img src="{{signUpImg}}" height="150" width="150">
+    <h1>Account created successfully</h1>
+    <h3 *ngIf="role==='users'">Your User Id is {{userId}}</h3>
+    <h3 *ngIf="role==='coaches'">Your Coach Id is {{coachId}}</h3>
+    <button (click)="directLogin()" class="login btn btn-primary">Login Now</button>
+</div>
+</div>

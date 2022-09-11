@@ -1,0 +1,16 @@
+<div class="login">
+    <div class="title row">
+        <img src="{{loginImg}}" height="50" width="50">
+        <h4>Login as {{loginTitle}}</h4>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <input [placeholder]="placeholder" formControlName="id" type="text" class="form-control"><br>
+        <p class="validation" *ngIf="loginForm.controls.id.errors && (loginForm.controls.id.dirty || loginForm.controls.id.touched)">This field is required</p>
+        <input placeholder="Password" formControlName="password" type="password" class="form-control"><br>
+        <p class="validation" *ngIf="loginForm.controls.password.errors && (loginForm.controls.password.dirty || loginForm.controls.password.touched)">Password should have 5 to 10 characters
+        </p>
+        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Login</button>
+        <p class="validation" style="margin-top: 1%;" *ngIf="errorMessage">{{errorMessage}}</p>
+    </form>
+
+</div>

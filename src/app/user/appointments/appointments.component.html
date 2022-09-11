@@ -1,0 +1,53 @@
+<div *ngIf="showApp && !reschedule && !success">
+    <div *ngFor="let appointment of appointmentDetails" class="appointment">
+        <h4>Appointment Date:<br> {{appointment.appointmentDate}}</h4>
+        <h5>Slot: {{appointment.slot}}</h5>
+        <p>Booking id: {{appointment.id}}</p>
+        <p>User id: {{appointment.userId}}</p>
+        <p>Coach id: {{appointment.coachId}}</p><br>
+        <button (click)="reschedule=true; rescheduleId=appointment.id" class="btn btn-info">Reschedule
+            Appointment</button><br><br>
+        <button (click)="rescheduleId=appointment.id;cancel();" class="btn btn-danger">Cancel Appointment</button>
+    </div>
+</div>
+<div *ngIf="!showApp && !reschedule && !success">
+    <div class="noApp">
+        <img src="../../../assets/Images/Notepad_icon.svg.png" height="100" width="100">
+        <h2>You haven't made any appointments yet</h2>
+    </div>
+</div>
+<div *ngIf="reschedule && !success">
+    <div class="reschedule">
+        <div class="row">
+            <img src="../../../assets/Images/Notepad_icon.svg.png" height="50" width="50">
+            <h2>Reschedule your appointment</h2>
+        </div>
+        <form [formGroup]="appointmentForm" (ngSubmit)="rescheduleAppointment()">
+            <label>Date of Appointment</label>
+            <input type="date" formControlName="appointmentDate" class="form-control"><br>
+            <p class="validation"
+                *ngIf="appointmentForm.controls.appointmentDate.errors && (appointmentForm.controls.appointmentDate.dirty || appointmentForm.controls.appointmentDate.touched)">
+                Date should be any upcoming 7 days</p>
+            <label>Preferred Slot</label><br>
+            <div class="form-group">
+                <input type="radio" formControlName="slot" name="slot" value="9 AM to 10 AM"><label>9 AM to 10
+                    AM</label>
+                <input type="radio" formControlName="slot" name="slot" value="10 AM to 11 AM"><label>10 AM to 11
+                    AM</label>
+                <input type="radio" formControlName="slot" name="slot" value="11 AM to 12 AM"><label>11 AM to 12
+                    AM</label>
+                <input type="radio" formControlName="slot" name="slot" value="2 PM to 3 PM"><label>2 PM to 3 PM</label>
+                <input type="radio" formControlName="slot" name="slot" value="3 PM to 4 PM"><label>3 PM to 4 PM</label>
+                <input type="radio" formControlName="slot" name="slot" value="4 PM to 5 PM"><label>4 PM to 5 PM</label>
+            </div>
+            <button [disabled]="!appointmentForm.valid" class="btn btn-success">Reschedule your
+                appointment</button>
+        </form>
+    </div>
+</div>
+<div *ngIf="success">
+    <div class="success">
+        <p>Your appointment is rescheduled successfully</p>
+        <button class="btn btn-primary" (click)="goBack()">Go back</button>
+    </div>
+</div>

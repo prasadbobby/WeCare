@@ -1,0 +1,14 @@
+.schedules{
+    background-color: black;
+    border-radius: 4%;
+    text-align: center;
+    justify-content: center;
+    margin: 6% 38% 6% 38%;
+    color: white;
+    padding: 2%;
+}
+.noschedule{
+    margin: 6%;
+    justify-content: center;
+    text-align: center;
+}

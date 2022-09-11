@@ -1,0 +1,51 @@
+.search{
+    margin: 2%;
+    text-align: right;
+    float: right;
+    width: 20%;
+}
+.profile{
+    background-color: white;
+    color: black;
+    margin: 4% 30% 4% 30% ;
+    padding: 2%;
+    border-radius: 6%;
+}
+.profile p{
+    margin: -1%;
+}
+.details button{
+    margin: 10% 4% 10% 0%;
+    width: 100%;
+}
+.appointment{
+    background-color: black;
+    color: white;
+    margin: 4% 20% 4% 20%;
+    padding: 4%;
+    border-radius: 4%;
+}
+.appointment .row{
+    justify-content: center;
+    text-align: center;
+    margin: 4%;
+    margin-top: 0%;
+}
+.form-group label{
+    margin: 1.4%;
+}
+.appointment button{
+    width: 100%;
+}
+.validation{
+    color: red;
+    margin-top: -4%;
+}
+.confirm{
+    background-color: black;
+    color: white;
+    padding: 3%;
+    margin: 6% 35% 6% 35%;
+    border-radius: 4%;
+    text-align: center;
+}
