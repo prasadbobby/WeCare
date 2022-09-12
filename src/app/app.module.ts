@@ -13,7 +13,6 @@ import { SignupService } from './signup/signup.service';
 import { UserModule } from './user/user.module';
 import { CoachModule } from './coach/coach.module';
 import { FormCardComponent } from './form-card/form-card.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     LoginComponent,
     SignupComponent,
     FormCardComponent,
-    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
