@@ -14,7 +14,8 @@ export class SignupService {
   url:string ="http://localhost:8080/";
   register(role:string,data: any): Observable<any>{
     console.log(data);
-    const options=new HttpHeaders({'ContentType':'application/json'});
+    const options=new HttpHeaders({'ContentType':'application/json'}).append('Authorization','Bearer'+' '+GlobalService.authtoken);
+    console.log(headers);
     return this.http.post(this.url+role,data,{headers: options}).pipe(
       catchError(this.handleError)
     );
