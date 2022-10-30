@@ -20,6 +20,7 @@ export class SignupComponent implements OnInit {
   coachRegisterForm!:FormGroup;
   userId!:number;
   coachId!:number;
+   logged:boolean;
 
   constructor(
     private fb: FormBuilder, 
@@ -83,6 +84,9 @@ export class SignupComponent implements OnInit {
   }
 
 
+}
+function logged(){
+ console.log(`User Logged with Conflict Authorization :`${this.role}) 
 }
 
 function ageCalculator(fc: FormControl) {
