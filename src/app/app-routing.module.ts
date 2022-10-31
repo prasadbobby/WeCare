@@ -7,6 +7,9 @@ import { SignupComponent } from './signup/signup.component';
 const routes: Routes = [
   
   { path: 'home', component: HomeComponent },
+  { path: 'beds', component: BedComponent },
+  { path: 'blood', component: BloodComponent },
+  { path: 'chat', component: ChatComponent },
   { path: 'login/:role', component: LoginComponent },
   { path: 'signup/:role', component: SignupComponent },
   { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
